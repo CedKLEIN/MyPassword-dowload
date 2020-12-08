@@ -181,6 +181,7 @@ compiler_rcc_clean:
 debug/qrc_Ressources.cpp: ../../MyPassword/Src/Ressources.qrc \
 		D:/Qt/5.15.2/mingw81_32/bin/rcc.exe \
 		../../MyPassword/Src/Icon/high.png \
+		../../MyPassword/Src/Icon/importer.png \
 		../../MyPassword/Src/Icon/setting.png \
 		../../MyPassword/Src/Icon/english.png \
 		../../MyPassword/Src/Icon/add.png \
@@ -644,6 +645,7 @@ debug/moc_CreateAccountTab.cpp: ../../MyPassword/Src/CreateAccountTab.h \
 	'D:\Qt\5.15.2\mingw81_32\bin\moc.exe' $(DEFINES) --include C:/Users/cedao/Documents/Projet/MyPassword/PasswordHandler/build-MyPassword-Desktop_Qt_5_15_2_MinGW_32_bit-Release/Src/debug/moc_predefs.h -ID:/Qt/5.15.2/mingw81_32/mkspecs/win32-g++ -IC:/Users/cedao/Documents/Projet/MyPassword/PasswordHandler/MyPassword/Src -ID:/Qt/5.15.2/mingw81_32/include -ID:/Qt/5.15.2/mingw81_32/include/QtWidgets -ID:/Qt/5.15.2/mingw81_32/include/QtGui -ID:/Qt/5.15.2/mingw81_32/include/QtANGLE -ID:/Qt/5.15.2/mingw81_32/include/QtSql -ID:/Qt/5.15.2/mingw81_32/include/QtCore -I. -ID:/Qt/Tools/mingw810_32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++ -ID:/Qt/Tools/mingw810_32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32 -ID:/Qt/Tools/mingw810_32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward -ID:/Qt/Tools/mingw810_32/lib/gcc/i686-w64-mingw32/8.1.0/include -ID:/Qt/Tools/mingw810_32/lib/gcc/i686-w64-mingw32/8.1.0/include-fixed -ID:/Qt/Tools/mingw810_32/i686-w64-mingw32/include ../../MyPassword/Src/CreateAccountTab.h -o debug/moc_CreateAccountTab.cpp
 
 debug/moc_GenerateFileTab.cpp: ../../MyPassword/Src/GenerateFileTab.h \
+		../../MyPassword/Src/Interface/IUpdateAccountListener.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QWidget \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qwidget.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qtwidgetsglobal.h \
@@ -1372,9 +1374,10 @@ debug/AccountTab.o: ../../MyPassword/Src/AccountTab.cpp ../../MyPassword/Src/Acc
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qlabel.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtGui/QIcon \
 		../../MyPassword/Src/CreateAccountTab.h \
+		../../MyPassword/Src/GenerateFileTab.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QWidget \
 		../../MyPassword/Src/SettingsTab.h \
 		../../MyPassword/Src/Interface/IUpdateIconThemeListener.h \
-		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QWidget \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QComboBox \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qcombobox.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QCheckBox \
@@ -1389,6 +1392,7 @@ debug/AccountTab.o: ../../MyPassword/Src/AccountTab.cpp ../../MyPassword/Src/Acc
 		../../MyPassword/Src/Interface/ISettings.h \
 		../../MyPassword/Src/Utility.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/QSize \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QObject \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QMessageBox \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qmessagebox.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qdialog.h \
@@ -1535,6 +1539,7 @@ debug/AccountWindow.o: ../../MyPassword/Src/AccountWindow.cpp ../../MyPassword/S
 		../../MyPassword/Src/Interface/IDatabase.h \
 		../../MyPassword/Src/Utility.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/QSize \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QObject \
 		../../MyPassword/Src/Interface/ILog.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QMessageBox \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qmessagebox.h \
@@ -1678,6 +1683,7 @@ debug/CreateAccountTab.o: ../../MyPassword/Src/CreateAccountTab.cpp ../../MyPass
 		../../MyPassword/Src/Interface/ILog.h \
 		../../MyPassword/Src/Utility.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/QSize \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QObject \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QMessageBox \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qmessagebox.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qdialog.h
@@ -1726,12 +1732,7 @@ debug/Database.o: ../../MyPassword/Src/Database.cpp ../../MyPassword/Src/Databas
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/QSize \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qsize.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qmargins.h \
-		D:/Qt/5.15.2/mingw81_32/include/QtCore/QDir \
-		D:/Qt/5.15.2/mingw81_32/include/QtCore/qdir.h \
-		D:/Qt/5.15.2/mingw81_32/include/QtCore/qfileinfo.h \
-		D:/Qt/5.15.2/mingw81_32/include/QtCore/qfile.h \
-		D:/Qt/5.15.2/mingw81_32/include/QtCore/qfiledevice.h \
-		D:/Qt/5.15.2/mingw81_32/include/QtCore/qiodevice.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QObject \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qobject.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qobjectdefs.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qobjectdefs_impl.h \
@@ -1753,6 +1754,12 @@ debug/Database.o: ../../MyPassword/Src/Database.cpp ../../MyPassword/Src/Databas
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qvarlengtharray.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qcontainerfwd.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qobject_impl.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QDir \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qdir.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qfileinfo.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qfile.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qfiledevice.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qiodevice.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qshareddata.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qhash.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtSql/QSqlQuery \
@@ -1768,7 +1775,8 @@ debug/Database.o: ../../MyPassword/Src/Database.cpp ../../MyPassword/Src/Databas
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qset.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qcontiguouscache.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qsharedpointer.h \
-		D:/Qt/5.15.2/mingw81_32/include/QtCore/qsharedpointer_impl.h
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qsharedpointer_impl.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/Database.o ../../MyPassword/Src/Database.cpp
 
 debug/DateTime.o: ../../MyPassword/Src/DateTime.cpp ../../MyPassword/Src/DateTime.h \
@@ -1817,6 +1825,7 @@ debug/Encryption.o: ../../MyPassword/Src/Encryption.cpp ../../MyPassword/Src/Enc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/Encryption.o ../../MyPassword/Src/Encryption.cpp
 
 debug/GenerateFileTab.o: ../../MyPassword/Src/GenerateFileTab.cpp ../../MyPassword/Src/GenerateFileTab.h \
+		../../MyPassword/Src/Interface/IUpdateAccountListener.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QWidget \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qwidget.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qtwidgetsglobal.h \
@@ -1943,9 +1952,11 @@ debug/GenerateFileTab.o: ../../MyPassword/Src/GenerateFileTab.cpp ../../MyPasswo
 		D:/Qt/5.15.2/mingw81_32/include/QtGui/qicon.h \
 		../../MyPassword/Src/Account.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/QString \
+		../../MyPassword/Src/Interface/IDatabase.h \
 		../../MyPassword/Src/Interface/ILog.h \
 		../../MyPassword/Src/Utility.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/QSize \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QObject \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QScrollBar \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qscrollbar.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qabstractslider.h \
@@ -1953,7 +1964,10 @@ debug/GenerateFileTab.o: ../../MyPassword/Src/GenerateFileTab.cpp ../../MyPasswo
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qfiledialog.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qdir.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qfileinfo.h \
-		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qdialog.h
+		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qdialog.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QFile \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QTextStream \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/GenerateFileTab.o ../../MyPassword/Src/GenerateFileTab.cpp
 
 debug/InfoTab.o: ../../MyPassword/Src/InfoTab.cpp ../../MyPassword/Src/InfoTab.h \
@@ -2108,7 +2122,8 @@ debug/InfoTab.o: ../../MyPassword/Src/InfoTab.cpp ../../MyPassword/Src/InfoTab.h
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QGroupBox \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qgroupbox.h \
 		../../MyPassword/Src/Utility.h \
-		D:/Qt/5.15.2/mingw81_32/include/QtCore/QSize
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QSize \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QObject
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/InfoTab.o ../../MyPassword/Src/InfoTab.cpp
 
 debug/Log.o: ../../MyPassword/Src/Log.cpp ../../MyPassword/Src/Log.h \
@@ -2284,6 +2299,7 @@ debug/MainWindow.o: ../../MyPassword/Src/MainWindow.cpp ../../MyPassword/Src/Mai
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qscrollarea.h \
 		../../MyPassword/Src/Utility.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/QSize \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QObject \
 		D:/Qt/5.15.2/mingw81_32/include/QtGui/QIcon
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/MainWindow.o ../../MyPassword/Src/MainWindow.cpp
 
@@ -2326,8 +2342,29 @@ debug/PasswordSecurity.o: ../../MyPassword/Src/PasswordSecurity.cpp ../../MyPass
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/QSize \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qsize.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qmargins.h \
-		D:/Qt/5.15.2/mingw81_32/include/QtCore/QRegExp \
-		D:/Qt/5.15.2/mingw81_32/include/QtCore/qregexp.h
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QObject \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qobject.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qobjectdefs.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qobjectdefs_impl.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qlist.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qalgorithms.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qiterator.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qhashfunctions.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qpair.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qvector.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qcontainertools_impl.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qpoint.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qbytearraylist.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qstringlist.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qregexp.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qstringmatcher.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qcoreevent.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qscopedpointer.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qmetatype.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qvarlengtharray.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qcontainerfwd.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/qobject_impl.h \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QRegExp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/PasswordSecurity.o ../../MyPassword/Src/PasswordSecurity.cpp
 
 debug/Settings.o: ../../MyPassword/Src/Settings.cpp ../../MyPassword/Src/Settings.h \
@@ -2547,6 +2584,7 @@ debug/SettingsTab.o: ../../MyPassword/Src/SettingsTab.cpp ../../MyPassword/Src/S
 		../../MyPassword/Src/Interface/ILog.h \
 		../../MyPassword/Src/Utility.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/QSize \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QObject \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QMessageBox \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qmessagebox.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qdialog.h \
@@ -2748,6 +2786,7 @@ debug/main.o: ../../MyPassword/Src/main.cpp ../../MyPassword/Src/MainWindow.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qsettings.h \
 		../../MyPassword/Src/Utility.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/QSize \
+		D:/Qt/5.15.2/mingw81_32/include/QtCore/QObject \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/QApplication \
 		D:/Qt/5.15.2/mingw81_32/include/QtWidgets/qapplication.h \
 		D:/Qt/5.15.2/mingw81_32/include/QtCore/qcoreapplication.h \

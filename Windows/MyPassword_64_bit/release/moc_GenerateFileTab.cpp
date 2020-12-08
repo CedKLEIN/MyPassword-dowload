@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_GenerateFileTab_t {
-    QByteArrayData data[4];
-    char stringdata0[45];
+    QByteArrayData data[5];
+    char stringdata0[68];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,13 +33,14 @@ struct qt_meta_stringdata_GenerateFileTab_t {
 static const qt_meta_stringdata_GenerateFileTab_t qt_meta_stringdata_GenerateFileTab = {
     {
 QT_MOC_LITERAL(0, 0, 15), // "GenerateFileTab"
-QT_MOC_LITERAL(1, 16, 12), // "fillTextEdit"
-QT_MOC_LITERAL(2, 29, 0), // ""
-QT_MOC_LITERAL(3, 30, 14) // "saveTextInFile"
+QT_MOC_LITERAL(1, 16, 18), // "importDatafromFile"
+QT_MOC_LITERAL(2, 35, 0), // ""
+QT_MOC_LITERAL(3, 36, 16), // "generateTextEdit"
+QT_MOC_LITERAL(4, 53, 14) // "saveTextInFile"
 
     },
-    "GenerateFileTab\0fillTextEdit\0\0"
-    "saveTextInFile"
+    "GenerateFileTab\0importDatafromFile\0\0"
+    "generateTextEdit\0saveTextInFile"
 };
 #undef QT_MOC_LITERAL
 
@@ -49,7 +50,7 @@ static const uint qt_meta_data_GenerateFileTab[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -57,10 +58,12 @@ static const uint qt_meta_data_GenerateFileTab[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   24,    2, 0x0a /* Public */,
-       3,    0,   25,    2, 0x0a /* Public */,
+       1,    0,   29,    2, 0x0a /* Public */,
+       3,    0,   30,    2, 0x0a /* Public */,
+       4,    0,   31,    2, 0x0a /* Public */,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -73,8 +76,9 @@ void GenerateFileTab::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         auto *_t = static_cast<GenerateFileTab *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->fillTextEdit(); break;
-        case 1: _t->saveTextInFile(); break;
+        case 0: _t->importDatafromFile(); break;
+        case 1: _t->generateTextEdit(); break;
+        case 2: _t->saveTextInFile(); break;
         default: ;
         }
     }
@@ -110,13 +114,13 @@ int GenerateFileTab::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }

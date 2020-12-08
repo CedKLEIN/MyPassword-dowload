@@ -181,6 +181,7 @@ compiler_rcc_clean:
 debug/qrc_Ressources.cpp: ../../MyPassword/Src/Ressources.qrc \
 		D:/Qt/5.15.2/mingw81_64/bin/rcc.exe \
 		../../MyPassword/Src/Icon/high.png \
+		../../MyPassword/Src/Icon/importer.png \
 		../../MyPassword/Src/Icon/setting.png \
 		../../MyPassword/Src/Icon/english.png \
 		../../MyPassword/Src/Icon/add.png \
@@ -1943,6 +1944,7 @@ debug/GenerateFileTab.o: ../../MyPassword/Src/GenerateFileTab.cpp ../../MyPasswo
 		D:/Qt/5.15.2/mingw81_64/include/QtGui/qicon.h \
 		../../MyPassword/Src/Account.h \
 		D:/Qt/5.15.2/mingw81_64/include/QtCore/QString \
+		../../MyPassword/Src/Interface/IDatabase.h \
 		../../MyPassword/Src/Interface/ILog.h \
 		../../MyPassword/Src/Utility.h \
 		D:/Qt/5.15.2/mingw81_64/include/QtCore/QSize \
@@ -1953,7 +1955,10 @@ debug/GenerateFileTab.o: ../../MyPassword/Src/GenerateFileTab.cpp ../../MyPasswo
 		D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qfiledialog.h \
 		D:/Qt/5.15.2/mingw81_64/include/QtCore/qdir.h \
 		D:/Qt/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
-		D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qdialog.h
+		D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qdialog.h \
+		D:/Qt/5.15.2/mingw81_64/include/QtCore/QFile \
+		D:/Qt/5.15.2/mingw81_64/include/QtCore/QTextStream \
+		D:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/GenerateFileTab.o ../../MyPassword/Src/GenerateFileTab.cpp
 
 debug/InfoTab.o: ../../MyPassword/Src/InfoTab.cpp ../../MyPassword/Src/InfoTab.h \
